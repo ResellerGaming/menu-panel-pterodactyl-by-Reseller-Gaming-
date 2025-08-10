@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FR3API - WhatsApp Bot</title>
+  <style>
+    :root {
+      --bg: #ffffff;
+      --text: #111827;
+      --card: #f3f4f6;
+      --accent: #3b82f6;
+    }
+
+    body.dark {
+      --bg: #111827;
+      --text: #f9fafb;
+      --card: #1f2937;
+      --accent: #60a5fa;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      transition: background 0.3s ease, color 0.3s ease;
+      padding: 2rem;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .toggle-btn {
+      background: var(--accent);
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .card {
+      background-color: var(--card);
+      border-radius: 12px;
+      padding: 1.5rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h3 {
+      margin-top: 0;
+    }
+
+    .try-btn {
+      background-color: var(--accent);
+      color: white;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+
+    .try-btn:hover {
+      background-color: #2563eb;
+    }
+
+    footer {
+      margin-top: 3rem;
+      text-align: center;
+      font-size: 0.875rem;
+      color: #6b7280;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Website Kebutuhan Panel pterodactyl - Website ini cocok yang malas make bot</h1>
+    <button class="toggle-btn" onclick="toggleMode()">🌙 Mode Gelap</button>
+  </header>
+
+  <div class="grid">
+    <div class="card">
+      <h3>Create Admin Panel</h3>
+      <p>Membuat admin panel ke Pterodactyl dengan mudah.</p>
+      <button class="try-btn" onclick="goTo('https://create-adp-by-reseller-gaming.vercel.app')">Try It</button>
+    </div>
+    
+       <div class="card">
+      <h3>Create Panel pterodactyl</h3>
+      <p>Membuat akun panel dan server ke Pterodactyl dengan mudah.</p>
+      <button class="try-btn" onclick="goTo('https://create-panel-by-reseller-gaming.vercel.app')">Try It</button>
+    </div>
+
+    <div class="card">
+      <h3>List Server Pterodactyl</h3>
+      <p>Lihat semua server yang terdaftar di Pterodactyl.</p>
+      <button class="try-btn" onclick="goTo('https://example.com/list-servers')">Try It</button>
+    </div>
+
+    <div class="card">
+      <h3>Delete User</h3>
+      <p>Hapus user berdasarkan username dari Pterodactyl.</p>
+      <button class="try-btn" onclick="goTo('https://example.com/delete-user')">Try It</button>
+    </div>
+
+    <div class="card">
+      <h3>Get List User</h3>
+      <p>Tampilkan semua pengguna yang terdaftar.</p>
+      <button class="try-btn" onclick="goTo('https://example.com/get-users')">Try It</button>
+    </div>
+  </div>
+
+  <footer>
+    © made in Reseller Gaming Programer
+  </footer>
+
+  <script>
+    function toggleMode() {
+      document.body.classList.toggle("dark");
+      const btn = document.querySelector(".toggle-btn");
+      btn.textContent = document.body.classList.contains("dark")
+        ? "☀️ Mode Terang"
+        : "🌙 Mode Gelap";
+    }
+
+    function goTo(url) {
+      window.open(url, "_blank");
+    }
+  </script>
+</body>
+  </html>
